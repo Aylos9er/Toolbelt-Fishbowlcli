@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Fish Hybrid Theme with Voronoi and Cellular Automata</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="sketch.js" defer></script>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Dynamic Fish and Voronoi Cellular Automaton</h1>
+        <button onclick="toggleEditor()">Toggle Editor</button>
+        <div id="editor-container" class="hidden">
+            <textarea id="code-editor" rows="10" cols="50" oninput="updateCode()"></textarea>
+            <button onclick="runCode()">Run Code</button>
+        </div>
+        <label>Adjust Transparency:</label>
+        <input type="range" min="0" max="100" value="50" oninput="adjustTransparency(this.value)">
+    </div>
+    <div class="chat-container">
+        <h2>Chat with LLM</h2>
+        <textarea id="chat-input" rows="3" placeholder="Type your message..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+        <div id="chat-output"></div>
+    </div>
+</body>
+</html>
